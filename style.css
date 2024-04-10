@@ -1,0 +1,255 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	color: #212427;
+	font-family: "Roboto Mono", monospace;	
+	background-color: #fff;
+	font-size: 20px;
+}
+
+#container {
+	margin: 0px;
+}
+
+.section {
+	margin: 0px 0px 50px 0px;
+}
+
+.item {
+	margin: 40px 0px 40px 0px;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	display: inline-block;
+}
+
+h1 {
+	margin: 0px 0px 10px 0px;
+	color: #fff;
+	background-color: #666666;
+}
+
+h2 {
+	margin: 0px 0px 0px 0px;
+}
+
+h3 {
+	margin: 0px 0px 0px 0px;
+}
+
+p {	
+	margin: 0px 5px 5px 10px;
+}
+
+.info {
+	margin: 0px 5px 10px 10px;
+	font-weight: bold;
+}
+
+.accordion, .accordionActive {
+	cursor: pointer;
+}
+
+.panel {
+	margin: 5px 0px 5px 30px;
+	display: none;
+}
+
+a {
+	color: #212427;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+}
+
+.preview-container {
+	height: 30px;
+	margin-bottom: 10px;
+	overflow-x: hidden;
+	.preview {
+		height: 100%;
+		width: min-content;
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		img {
+			height: 100%;
+			display: inline-block;
+			position: relative;
+			opacity: 0.25;
+		}
+	}
+}
+
+.carousel {
+	width: 100%;
+	margin-top: -10px; /* see .preview-container margin-bottom */
+	margin-bottom: 10px;
+	display: none;
+	.carousel-cell {
+		height: 300px;
+		img {
+			height: 300px;
+			/*margin-right: 5px;*/
+			opacity: 0.25;				
+		}
+		video {
+			width: auto;
+			height: 300px;
+			/*margin-right: 5px;*/
+		}
+		.flickity-lazyloaded {
+			opacity: 1;
+			transition: opacity 0.5s;
+		}
+		.flickity-lazyerror {
+			opacity: 0;
+		}		
+	}	
+	.flickity-button {
+	  background: transparent;
+	}
+	.flickity-button:hover {
+	  outline: none;
+	}	
+	.flickity-button:active {
+	  outline: none;
+	}	
+	.flickity-button:focus {
+	  outline: none;
+	}
+	.flickity-button-icon {
+	  fill: rgba(255, 255, 255, 0.75);
+	}
+	.flickity-prev-next-button.previous {
+	  left: 0px;
+	}
+	.flickity-prev-next-button.next {
+	  right: 0px;
+	}	
+}
+
+#installations {
+	h2 {
+		color: white;
+		background-color: #ff0000;
+	}
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #e06666;
+		}
+		a {
+			background-color: #f6eeee; /*#f4cccc + 2*/
+		}
+		a:hover {
+			background-color: #ea9999;
+		}			
+	}
+}
+
+#apps-games {
+	h2 {
+		color: white;
+		background-color: #4a86e8;
+	}	
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #6d9eeb;
+		}
+		a {
+			background-color: #daebf9; /*#c9daf8 + 1*/
+		}
+		a:hover {
+			background-color: #a4c2f4;
+		}		
+	}
+}
+
+#prototypes {
+	h2 {
+		color: white;
+		background-color: #ff9900;
+	}	
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #f6b26b;
+		}		
+		a {
+			background-color: #fef7ef; /* fce5cd + 2 */
+		}
+		a:hover {
+			background-color: #f9cb9c;
+		}		
+	}	
+}
+
+#game-jams {
+	h2 {
+		color: white;
+		background-color: #0000ff;
+	}	
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #6fa8dc;
+		}
+		a {
+			background-color: #dff3f4; /*#cfe2f3*/
+		}
+		a:hover {
+			background-color: #9fc5e8;
+		}		
+	}
+}
+
+#education {
+	h2 {
+		color: white;
+		background-color: #00ff00;
+	}	
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #93c47d;
+		}
+		a {
+			background-color: #d9ead3; /*#d9ead3*/
+		}
+		a:hover {
+			background-color: #b6d7a8;
+		}	
+	}
+}
+
+@media screen and (max-width: 1024px){
+	body {
+		font-size: 14px;
+	}
+	.preview-container {
+		height: 20px;
+	}
+	.carousel {
+		.carousel-cell {
+			height: 200px;
+			img {
+				height: 200px;
+			}
+			video {
+				width: auto;
+				height: 200px;
+			}		
+		}	
+	}
+	.panel {
+		margin: 5px 0px 5px 20px;
+	}	
+}

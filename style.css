@@ -230,6 +230,19 @@ a:hover {
 	}
 }
 
+#error404 {
+	h1 {
+		color: #fff;
+		background-color: #ff0000;		
+	}
+	a {
+		background-color: #dddddd; /*#f4cccc + 2*/
+	}
+	a:hover {
+		background-color: #888888;
+	}
+}
+
 @media screen and (max-width: 1024px){
 	body {
 		font-size: 14px;

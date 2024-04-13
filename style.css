@@ -50,7 +50,7 @@ p {
 	font-weight: bold;
 }
 
-.accordion, .accordionActive {
+.dropdown, .dropdownActive {
 	cursor: pointer;
 }
 
@@ -96,20 +96,12 @@ a:hover {
 		height: 300px;
 		img {
 			height: 300px;
-			/*margin-right: 5px;*/
-			opacity: 0.25;				
+			/*margin-right: 5px;*/			
 		}
 		video {
 			width: auto;
 			height: 300px;
 			/*margin-right: 5px;*/
-		}
-		.flickity-lazyloaded {
-			opacity: 1;
-			transition: opacity 0.5s;
-		}
-		.flickity-lazyerror {
-			opacity: 0;
 		}		
 	}	
 	.flickity-button {

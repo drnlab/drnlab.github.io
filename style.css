@@ -17,13 +17,21 @@ body {
 
 .section {
 	margin: 0px 0px 45px 0px;
-	.section-content {
+	.dropdown-disabled {
+		color: #BDBDBD; /* Gray 400 */
+		background-color: #757575; /* Gray 600 */
+	}
+	.content {
 		background-color: white;
 	}
 }
 
 .item {
 	padding: 45px 0px 0px 0px;
+	.content {
+		margin: 5px 0px 5px 30px;
+		display: none;
+	}	
 }
 
 a {
@@ -75,11 +83,6 @@ p {
 	cursor: pointer;
 }
 
-.panel {
-	margin: 5px 0px 5px 30px;
-	display: none;
-}
-
 .preview-container {
 	height: 30px;
 	margin-bottom: 10px;
@@ -117,6 +120,7 @@ p {
 		.flickity-lazyloaded, 
 		.flickity-lazyerror {
 			opacity: 1;
+			transition: opacity 0.5s;
 		}		
 	}	
 	.flickity-button {
@@ -144,11 +148,11 @@ p {
 
 #installations {
 	h2 {
-		a {
+		.dropdown {
 			color: white;
 			background-color: #EF5350; /* Red 400 */
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #E53935; /* Red 600 */
 		}
@@ -172,11 +176,11 @@ p {
 
 #apps-games {
 	h2 {
-		a {
+		.dropdown {
 			color: white;
 			background-color: #42A5F5; /* Blue 400 */		
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #1E88E5; /* Blue 600 */
 		}		
@@ -200,14 +204,14 @@ p {
 
 #tools {
 	h2 {
-		a {
+		.dropdown {
 			color: white;
 			background-color: #FFA726; /* Orange 400 */		
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #FB8C00; /* Orange 600 */
-		}
+		}		
 	}		
 	hr {
 		background-color: #FFA726; /* Orange 400 */	
@@ -226,17 +230,17 @@ p {
 	}	
 }
 
-#game-jams {
-	h2 {		
-		a {
+#game-jams {	
+	h2 {
+		.dropdown {
 			color: white;
 			background-color: #AB47BC; /* Purple 400 */		
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #8E24AA; /* Purple 600 */
-		}
-	}		
+		}	
+	}	
 	hr {
 		background-color: #AB47BC; /* Purple 400 */		
 	}		
@@ -256,14 +260,14 @@ p {
 
 #education {
 	h2 {
-		a {
+		.dropdown {
 			color: white;
 			background-color: #26A69A; /* Teal 400 */		
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #00897B; /* Teal 600 */
-		}
+		}		
 	}
 	hr {
 		background-color: #26A69A; /* Teal 400 */
@@ -284,14 +288,14 @@ p {
 
 #non-interactive {
 	h2 {
-		a {
+		.dropdown {
 			color: white;
 			background-color: #9CCC65; /* Light green 400 */		
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #7CB342; /* Light green 600 */
-		}
+		}		
 	}
 	hr {
 		background-color: #9CCC65; /* Light green 400 */
@@ -311,15 +315,15 @@ p {
 }
 
 #collabs {
-	h2 {		
-		a {
+	h2 {
+		.dropdown {
 			color: white;
 			background-color: #78909C; /* Blue grey 400	*/	
 		}
-		a:hover {
+		.dropdown:hover {
 			color: white;
 			background-color: #546E7A; /* Blue grey 600 */
-		}
+		}		
 	}
 	hr {
 		background-color: #78909C; /* Blue grey 400	*/

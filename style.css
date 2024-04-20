@@ -5,8 +5,9 @@ html, body {
 body {
 	margin: 0px;
 	color: #212427;
-	font-family: "Roboto Mono", monospace;	
-	background-color: #fff;
+	font-family: "Roboto Mono", monospace;
+	background-image: url("media/background.png");
+	background-repeat: repeat;	
 	font-size: 20px;
 }
 
@@ -15,11 +16,22 @@ body {
 }
 
 .section {
-	margin: 0px 0px 50px 0px;
+	margin: 0px 0px 45px 0px;
+	.section-content {
+		background-color: white;
+	}
 }
 
 .item {
-	margin: 40px 0px 40px 0px;
+	padding: 45px 0px 0px 0px;
+}
+
+a {
+	color: #212427;
+	text-decoration: none;
+}
+a:hover {
+	color: #212427;
 }
 
 h1, h2, h3 {
@@ -30,15 +42,24 @@ h1, h2, h3 {
 h1 {
 	margin: 0px 0px 10px 0px;
 	color: #fff;
-	background-color: #666666;
+	background-color: #424242; /* Gray 800 */
 }
 
 h2 {
 	margin: 0px 0px 0px 0px;
+	sup {
+		font-size: 75%;
+	}
 }
 
 h3 {
 	margin: 0px 0px 0px 0px;
+}
+
+hr {
+	margin: 0px;
+	height: 2px;
+	border: none;
 }
 
 p {	
@@ -57,15 +78,6 @@ p {
 .panel {
 	margin: 5px 0px 5px 30px;
 	display: none;
-}
-
-a {
-	color: #212427;
-	text-decoration: none;
-}
-
-a:hover {
-	color: white;
 }
 
 .preview-container {
@@ -89,19 +101,22 @@ a:hover {
 
 .carousel {
 	width: 100%;
-	margin-top: -10px; /* see .preview-container margin-bottom */
+	margin-top: -10px; /* See .preview-container margin-bottom */
 	margin-bottom: 10px;
 	display: none;
 	.carousel-cell {
 		height: 300px;
 		img {
-			height: 300px;
-			/*margin-right: 5px;*/			
+			height: 300px;			
+			opacity: 0.25;			
 		}
 		video {
 			width: auto;
 			height: 300px;
-			/*margin-right: 5px;*/
+		}
+		.flickity-lazyloaded, 
+		.flickity-lazyerror {
+			opacity: 1;
 		}		
 	}	
 	.flickity-button {
@@ -109,7 +124,7 @@ a:hover {
 	}
 	.flickity-button:hover {
 	  outline: none;
-	}	
+	}
 	.flickity-button:active {
 	  outline: none;
 	}	
@@ -129,96 +144,211 @@ a:hover {
 
 #installations {
 	h2 {
-		color: white;
-		background-color: #ff0000;
+		a {
+			color: white;
+			background-color: #EF5350; /* Red 400 */
+		}
+		a:hover {
+			color: white;
+			background-color: #E53935; /* Red 600 */
+		}
+	}
+	hr {
+		background-color: #EF5350; /* Red 400 */
 	}
 	.item {
 		h3, .preview, .carousel {
 			color: white;
-			background-color: #e06666;
+			background-color: #EF5350; /* Red 400 */
 		}
 		a {
-			background-color: #f6eeee; /*#f4cccc + 2*/
+			background-color: #FFEBEE; /* Red 50 */
 		}
 		a:hover {
-			background-color: #ea9999;
+			background-color: #FFCDD2; /* Red 100 */
 		}			
 	}
 }
 
 #apps-games {
 	h2 {
-		color: white;
-		background-color: #4a86e8;
+		a {
+			color: white;
+			background-color: #42A5F5; /* Blue 400 */		
+		}
+		a:hover {
+			color: white;
+			background-color: #1E88E5; /* Blue 600 */
+		}		
+	}
+	hr {
+		background-color: #42A5F5; /* Blue 400 */
 	}	
 	.item {
 		h3, .preview, .carousel {
 			color: white;
-			background-color: #6d9eeb;
+			background-color: #42A5F5; /* Blue 400 */
 		}
 		a {
-			background-color: #daebf9; /*#c9daf8 + 1*/
+			background-color: #E3F2FD; /* Blue 50 */
 		}
 		a:hover {
-			background-color: #a4c2f4;
+			background-color: #BBDEFB; /* Blue 100 */
 		}		
 	}
 }
 
-#prototypes {
+#tools {
 	h2 {
-		color: white;
-		background-color: #ff9900;
+		a {
+			color: white;
+			background-color: #FFA726; /* Orange 400 */		
+		}
+		a:hover {
+			color: white;
+			background-color: #FB8C00; /* Orange 600 */
+		}
+	}		
+	hr {
+		background-color: #FFA726; /* Orange 400 */	
 	}	
 	.item {
 		h3, .preview, .carousel {
 			color: white;
-			background-color: #f6b26b;
-		}		
+			background-color: #FFA726; /*  Orange 400 */
+		}
 		a {
-			background-color: #fef7ef; /* fce5cd + 2 */
+			background-color: #FFF3E0; /* Orange 50 */
 		}
 		a:hover {
-			background-color: #f9cb9c;
+			background-color: #FFE0B2; /* Orange 100 */
 		}		
 	}	
 }
 
 #game-jams {
-	h2 {
-		color: white;
-		background-color: #0000ff;
-	}	
+	h2 {		
+		a {
+			color: white;
+			background-color: #AB47BC; /* Purple 400 */		
+		}
+		a:hover {
+			color: white;
+			background-color: #8E24AA; /* Purple 600 */
+		}
+	}		
+	hr {
+		background-color: #AB47BC; /* Purple 400 */		
+	}		
 	.item {
 		h3, .preview, .carousel {
 			color: white;
-			background-color: #6fa8dc;
+			background-color: #AB47BC; /* Purple 400 */
 		}
 		a {
-			background-color: #dff3f4; /*#cfe2f3*/
+			background-color: #F3E5F5; /* Purple 50 */
 		}
 		a:hover {
-			background-color: #9fc5e8;
+			background-color: #E1BEE7; /* Purple 100 */
 		}		
 	}
 }
 
 #education {
 	h2 {
-		color: white;
-		background-color: #00ff00;
+		a {
+			color: white;
+			background-color: #26A69A; /* Teal 400 */		
+		}
+		a:hover {
+			color: white;
+			background-color: #00897B; /* Teal 600 */
+		}
+	}
+	hr {
+		background-color: #26A69A; /* Teal 400 */
+	}		
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #26A69A; /* Teal 400 */
+		}		
+		a {
+			background-color: #E0F2F1; /* Teal 50 */
+		}
+		a:hover {
+			background-color: #B2DFDB; /* Teal 100 */
+		}	
+	}
+}
+
+#non-interactive {
+	h2 {
+		a {
+			color: white;
+			background-color: #9CCC65; /* Light green 400 */		
+		}
+		a:hover {
+			color: white;
+			background-color: #7CB342; /* Light green 600 */
+		}
+	}
+	hr {
+		background-color: #9CCC65; /* Light green 400 */
 	}	
 	.item {
 		h3, .preview, .carousel {
 			color: white;
-			background-color: #93c47d;
+			background-color: #9CCC65; /* Light green 400 */
 		}
 		a {
-			background-color: #d9ead3; /*#d9ead3*/
+			background-color: #F1F8E9; /* Light green 50 */
 		}
 		a:hover {
-			background-color: #b6d7a8;
-		}	
+			background-color: #DCEDC8; /* Light green 100 */
+		}		
+	}
+}
+
+#collabs {
+	h2 {		
+		a {
+			color: white;
+			background-color: #78909C; /* Blue grey 400	*/	
+		}
+		a:hover {
+			color: white;
+			background-color: #546E7A; /* Blue grey 600 */
+		}
+	}
+	hr {
+		background-color: #78909C; /* Blue grey 400	*/
+	}	
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #78909C; /* Blue grey 400 */
+		}
+		a {
+			background-color: #ECEFF1; /* Blue grey 50 */
+		}
+		a:hover {
+			background-color: #CFD8DC; /* Blue grey 100 */
+		}		
+	}
+}
+
+#contact {
+	h2 {
+		margin: 0px 0px 10px 0px;
+		color: #fff;
+		background-color: #424242; /* Grey 800 */
+	}
+	a {
+		background-color: #E0E0E0; /* Grey 300 */
+	}
+	a:hover {
+		background-color: #BDBDBD; /* Grey 400 */
 	}
 }
 
@@ -228,7 +358,7 @@ a:hover {
 		background-color: #ff0000;		
 	}
 	a {
-		background-color: #dddddd; /*#f4cccc + 2*/
+		background-color: #dddddd;
 	}
 	a:hover {
 		background-color: #888888;
@@ -241,6 +371,12 @@ a:hover {
 	}
 	.preview-container {
 		height: 20px;
+	}
+	.section {		
+		margin: 0px 0px 30px 0px;
+	}
+	.item {
+		padding: 30px 0px 0px 0px;	
 	}
 	.carousel {
 		.carousel-cell {
@@ -256,5 +392,5 @@ a:hover {
 	}
 	.panel {
 		margin: 5px 0px 5px 20px;
-	}	
+	}
 }

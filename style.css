@@ -28,10 +28,25 @@ body {
 
 .item {
 	padding: 45px 0px 0px 0px;
-	.content {
-		margin: 5px 0px 5px 30px;
-		display: none;
-	}	
+	.info {
+		margin: 0px 5px 10px 10px;
+		font-weight: bold;
+	}
+}
+
+.details {
+	p {
+		padding-left: 35px;
+		position: relative;
+	}
+	p .bi {
+		position: absolute;
+		left: 0;
+	}
+	.sub-details {
+		margin: 5px 0px 5px 33px;
+		display: none;		
+	}
 }
 
 a {
@@ -70,13 +85,8 @@ hr {
 	border: none;
 }
 
-p {	
+p {
 	margin: 0px 5px 5px 10px;
-}
-
-.info {
-	margin: 0px 5px 10px 10px;
-	font-weight: bold;
 }
 
 .dropdown, .dropdownActive {
@@ -382,6 +392,19 @@ p {
 	.item {
 		padding: 30px 0px 0px 0px;	
 	}
+	.details {
+		p {
+			padding-left: 23px;
+			position: relative;
+		}
+		p .bi {
+			position: absolute;
+			left: 0;
+		}
+		.sub-details {
+			margin: 5px 0px 5px 22px;		
+		}
+	}	
 	.carousel {
 		.carousel-cell {
 			height: 200px;

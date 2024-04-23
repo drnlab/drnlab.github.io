@@ -8,7 +8,8 @@ body {
 	font-family: "Roboto Mono", monospace;
 	background-color: #efefef;
 	background-image: url("media/background.png");
-	background-repeat: no-repeat; 
+	background-position-x: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	font-size: 20px;
 }

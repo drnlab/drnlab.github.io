@@ -32,7 +32,7 @@ body {
 .item {
 	padding: 45px 0px 0px 0px;
 	.info {
-		margin: 0px 5px 10px 10px;
+		margin: 10px 5px 10px 10px;
 		font-weight: bold;
 	}
 }
@@ -98,7 +98,6 @@ p {
 
 .preview-container {
 	height: 30px;
-	margin-bottom: 10px;
 	overflow-x: hidden;
 	.preview {
 		height: 100%;
@@ -117,8 +116,6 @@ p {
 
 .carousel {
 	width: 100%;
-	margin-top: -10px; /* See .preview-container margin-bottom */
-	margin-bottom: 10px;
 	display: none;
 	.carousel-cell {
 		height: 300px;
@@ -275,55 +272,27 @@ p {
 	h2 {
 		.dropdown {
 			color: white;
-			background-color: #26A69A; /* Teal 400 */		
+			background-color: #66BB6A; /* Green 400 */		
 		}
 		.dropdown:hover {
 			color: white;
-			background-color: #00897B; /* Teal 600 */
+			background-color: #43A047; /* Green 600 */
 		}		
 	}
 	hr {
-		background-color: #26A69A; /* Teal 400 */
+		background-color: #66BB6A; /* Green 400 */	
 	}		
 	.item {
 		h3, .preview, .carousel {
 			color: white;
-			background-color: #26A69A; /* Teal 400 */
+			background-color: #66BB6A; /* Green 400 */	
 		}		
 		a {
-			background-color: #E0F2F1; /* Teal 50 */
+			background-color: #E8F5E9; /* Green 50 */
 		}
 		a:hover {
-			background-color: #B2DFDB; /* Teal 100 */
+			background-color: #C8E6C9; /* Green 100 */
 		}	
-	}
-}
-
-#non-interactive {
-	h2 {
-		.dropdown {
-			color: white;
-			background-color: #9CCC65; /* Light green 400 */		
-		}
-		.dropdown:hover {
-			color: white;
-			background-color: #7CB342; /* Light green 600 */
-		}		
-	}
-	hr {
-		background-color: #9CCC65; /* Light green 400 */
-	}	
-	.item {
-		h3, .preview, .carousel {
-			color: white;
-			background-color: #9CCC65; /* Light green 400 */
-		}
-		a {
-			background-color: #F1F8E9; /* Light green 50 */
-		}
-		a:hover {
-			background-color: #DCEDC8; /* Light green 100 */
-		}		
 	}
 }
 
@@ -351,6 +320,34 @@ p {
 		}
 		a:hover {
 			background-color: #CFD8DC; /* Blue grey 100 */
+		}		
+	}
+}
+
+#non-interactive {
+	h2 {
+		.dropdown {
+			color: white;
+			background-color: #9CCC65; /* Light green 400 */		
+		}
+		.dropdown:hover {
+			color: white;
+			background-color: #7CB342; /* Light green 600 */
+		}		
+	}
+	hr {
+		background-color: #9CCC65; /* Light green 400 */
+	}	
+	.item {
+		h3, .preview, .carousel {
+			color: white;
+			background-color: #9CCC65; /* Light green 400 */
+		}
+		a {
+			background-color: #F1F8E9; /* Light green 50 */
+		}
+		a:hover {
+			background-color: #DCEDC8; /* Light green 100 */
 		}		
 	}
 }

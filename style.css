@@ -92,6 +92,10 @@ p {
 	margin: 0px 5px 5px 10px;
 }
 
+.text-disabled {
+	color: lightgray;
+}
+
 .dropdown, .dropdownActive {
 	cursor: pointer;
 }
@@ -136,7 +140,7 @@ p {
 
 .carousel {
 	width: 100%;
-	display: none;
+	display: none;	
 	.carousel-cell {
 		height: 300px;
 		img {
@@ -176,18 +180,42 @@ p {
 	}	
 }
 
-#installations {
+#header {
+	h1 {
+		margin: 0px 0px 10px 0px;
+		color: #fff;
+		background-color: #424242; /* Gray 800 */
+		a {
+			color: #E0E0E0; /* Grey 300 */
+			background-color: #424242;
+		}
+		a:hover {
+			color: #fff;
+			background-color: #424242;
+		}			
+	}	
+	a {
+		background-color: #E0E0E0; /* Grey 300 */
+	}
+	a:hover {
+		background-color: #BDBDBD; /* Grey 400 */
+	}
+}
+
+.red {
 	h2 {
+		color: white;
+		background-color: #EF5350; /* Red 400 */
 		.dropdown {
-			color: white;
-			background-color: #EF5350; /* Red 400 */
+			color: white;			
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #E53935; /* Red 600 */
 		}
 	}
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #EF5350; /* Red 400 */
 	}
 	.item {
@@ -204,18 +232,20 @@ p {
 	}
 }
 
-#apps-games {
+.blue {
 	h2 {
+		color: white;
+		background-color: #42A5F5; /* Blue 400 */				
 		.dropdown {
-			color: white;
-			background-color: #42A5F5; /* Blue 400 */		
+			color: white;	
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #1E88E5; /* Blue 600 */
 		}		
 	}
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #42A5F5; /* Blue 400 */
 	}	
 	.item {
@@ -232,18 +262,20 @@ p {
 	}
 }
 
-#tools {
+.orange {
 	h2 {
+		color: white;
+		background-color: #FFA726; /* Orange 400 */			
 		.dropdown {
 			color: white;
-			background-color: #FFA726; /* Orange 400 */		
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #FB8C00; /* Orange 600 */
 		}		
 	}		
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #FFA726; /* Orange 400 */	
 	}	
 	.item {
@@ -260,18 +292,20 @@ p {
 	}	
 }
 
-#game-jams {	
+.purple {	
 	h2 {
+		color: white;
+		background-color: #AB47BC; /* Purple 400 */				
 		.dropdown {
 			color: white;
-			background-color: #AB47BC; /* Purple 400 */		
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #8E24AA; /* Purple 600 */
 		}	
 	}	
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #AB47BC; /* Purple 400 */		
 	}		
 	.item {
@@ -288,18 +322,20 @@ p {
 	}
 }
 
-#education {
+.green {
 	h2 {
+		color: white;
+		background-color: #66BB6A; /* Green 400 */			
 		.dropdown {
-			color: white;
-			background-color: #66BB6A; /* Green 400 */		
+			color: white;	
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #43A047; /* Green 600 */
 		}		
 	}
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #66BB6A; /* Green 400 */	
 	}		
 	.item {
@@ -316,18 +352,20 @@ p {
 	}
 }
 
-#collabs {
+.blue-grey {
 	h2 {
+		color: white;
+		background-color: #78909C; /* Blue grey 400	*/			
 		.dropdown {
 			color: white;
-			background-color: #78909C; /* Blue grey 400	*/	
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #546E7A; /* Blue grey 600 */
 		}		
 	}
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #78909C; /* Blue grey 400	*/
 	}	
 	.item {
@@ -344,18 +382,20 @@ p {
 	}
 }
 
-#non-interactive {
+.light-green {
 	h2 {
+		color: white;
+		background-color: #9CCC65; /* Light green 400 */
 		.dropdown {
 			color: white;
-			background-color: #9CCC65; /* Light green 400 */		
 		}
 		.dropdown:hover {
 			color: white;
 			background-color: #7CB342; /* Light green 600 */
 		}		
 	}
-	hr {
+	hr, .sidebar {
+		color: white;
 		background-color: #9CCC65; /* Light green 400 */
 	}	
 	.item {
@@ -383,6 +423,17 @@ p {
 	}
 	a:hover {
 		background-color: #BDBDBD; /* Grey 400 */
+	}
+}
+
+.year {
+	h2 {
+		color: white;
+		background-color: #BDBDBD; /* Light grey 400 */		
+	
+	}
+	hr {
+		background-color: #BDBDBD; /* Light grey 400 */
 	}
 }
 

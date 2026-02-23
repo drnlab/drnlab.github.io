@@ -37,6 +37,16 @@ body {
 	}
 }
 
+.blog-item {
+	padding: 35px 0px 0px 0px;
+	/*
+	.info {
+		margin: 10px 5px 10px 10px;
+		font-weight: bold;
+	}
+	*/
+}
+
 .details {
 	p {
 		padding-left: 35px;
@@ -203,9 +213,12 @@ p {
 }
 
 .red {
-	h2 {
+	h1, h2 {
 		color: white;
 		background-color: #EF5350; /* Red 400 */
+		a {
+			color: white;
+		}
 		.dropdown {
 			color: white;			
 		}
@@ -218,7 +231,7 @@ p {
 		color: white;
 		background-color: #EF5350; /* Red 400 */
 	}
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #EF5350; /* Red 400 */
@@ -233,9 +246,12 @@ p {
 }
 
 .blue {
-	h2 {
+	h1, h2 {
 		color: white;
-		background-color: #42A5F5; /* Blue 400 */				
+		background-color: #42A5F5; /* Blue 400 */		
+		a {
+			color: white;
+		}				
 		.dropdown {
 			color: white;	
 		}
@@ -248,7 +264,7 @@ p {
 		color: white;
 		background-color: #42A5F5; /* Blue 400 */
 	}	
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #42A5F5; /* Blue 400 */
@@ -263,9 +279,12 @@ p {
 }
 
 .orange {
-	h2 {
+	h1, h2 {
 		color: white;
-		background-color: #FFA726; /* Orange 400 */			
+		background-color: #FFA726; /* Orange 400 */	
+		a {
+			color: white;
+		}				
 		.dropdown {
 			color: white;
 		}
@@ -278,7 +297,7 @@ p {
 		color: white;
 		background-color: #FFA726; /* Orange 400 */	
 	}	
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #FFA726; /*  Orange 400 */
@@ -293,9 +312,12 @@ p {
 }
 
 .purple {	
-	h2 {
+	h1, h2 {
 		color: white;
-		background-color: #AB47BC; /* Purple 400 */				
+		background-color: #AB47BC; /* Purple 400 */	
+		a {
+			color: white;
+		}					
 		.dropdown {
 			color: white;
 		}
@@ -308,7 +330,7 @@ p {
 		color: white;
 		background-color: #AB47BC; /* Purple 400 */		
 	}		
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #AB47BC; /* Purple 400 */
@@ -323,9 +345,12 @@ p {
 }
 
 .green {
-	h2 {
+	h1, h2 {
 		color: white;
 		background-color: #66BB6A; /* Green 400 */			
+		a {
+			color: white;
+		}
 		.dropdown {
 			color: white;	
 		}
@@ -338,7 +363,7 @@ p {
 		color: white;
 		background-color: #66BB6A; /* Green 400 */	
 	}		
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #66BB6A; /* Green 400 */	
@@ -353,9 +378,12 @@ p {
 }
 
 .blue-grey {
-	h2 {
+	h1, h2 {
 		color: white;
-		background-color: #78909C; /* Blue grey 400	*/			
+		background-color: #78909C; /* Blue grey 400	*/	
+		a {
+			color: white;
+		}				
 		.dropdown {
 			color: white;
 		}
@@ -368,7 +396,7 @@ p {
 		color: white;
 		background-color: #78909C; /* Blue grey 400	*/
 	}	
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #78909C; /* Blue grey 400 */
@@ -383,9 +411,12 @@ p {
 }
 
 .light-green {
-	h2 {
+	h1, h2 {
 		color: white;
 		background-color: #9CCC65; /* Light green 400 */
+		a {
+			color: white;
+		}		
 		.dropdown {
 			color: white;
 		}
@@ -398,7 +429,7 @@ p {
 		color: white;
 		background-color: #9CCC65; /* Light green 400 */
 	}	
-	.item {
+	.item, .blog-item {
 		h3, .preview, .carousel {
 			color: white;
 			background-color: #9CCC65; /* Light green 400 */
@@ -466,6 +497,9 @@ p {
 	}
 	.item {
 		padding: 30px 0px 0px 0px;	
+	}
+	.blog-item {
+		padding: 20px 0px 0px 0px;
 	}
 	.details {
 		p {

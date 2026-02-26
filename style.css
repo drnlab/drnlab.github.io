@@ -460,8 +460,10 @@ p {
 .year {
 	h2 {
 		color: white;
-		background-color: #BDBDBD; /* Light grey 400 */		
-	
+		background-color: #BDBDBD; /* Light grey 400 */
+		a {
+			color: white;
+		}
 	}
 	hr {
 		background-color: #BDBDBD; /* Light grey 400 */

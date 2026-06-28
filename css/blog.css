@@ -261,6 +261,12 @@ p {
   bottom: -24px;
 }
 
+.bubble-emoji {
+  img {
+	image-rendering: pixelated;
+  }
+}
+
 /* color schemes */
 
 .red {

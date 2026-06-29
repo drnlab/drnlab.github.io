@@ -87,7 +87,6 @@ window.addEventListener("load", function (event) {
 	for (var i = 0; i < videos.length; i++) 
 	{
 		videos[i].addEventListener("focusout", function (event) {
-			console.log("focusout video " + this);
 			this.pause();
 		});
 	}	

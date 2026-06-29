@@ -90,6 +90,15 @@ window.addEventListener("load", function (event) {
 	{	
 		initSection(sections[i]);
 	}
+	const videos = document.getElementsByTagName("video");
+	for (var i = 0; i < videos.length; i++) 
+	{
+		videos[i].addEventListener("focusout", function (event) {
+			const video = event.target;
+			if (video.playing)
+				video.pause();
+		});
+	}	
 });
 </script>
 </html>

@@ -136,6 +136,24 @@ p {
 	cursor: pointer;
 }
 
+.media {
+	img, video
+	{
+		filter: grayscale(100%);
+		opacity: 0.5;
+		transition: 1s;
+	}
+}
+
+.media:hover {
+	img, video
+	{
+		filter: grayscale(0%);
+		opacity: 1;
+		transition: 0.5s;
+	}	
+}
+
 #header {
 	h1 {
 		margin: 0px 0px 10px 0px;
@@ -300,7 +318,7 @@ p {
 			background-color: #FFCDD2; /* Red 100 */
 		}			
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #EF5350; /* Red 400 */
 	}
 	.bubble-bottom-left:before
@@ -349,7 +367,7 @@ p {
 			background-color: #BBDEFB; /* Blue 100 */
 		}		
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #42A5F5; /* Blue 400 */
 	}
 	.bubble-bottom-left:before
@@ -398,7 +416,7 @@ p {
 			background-color: #FFE0B2; /* Orange 100 */
 		}		
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #FFA726; /* Orange 400 */
 	}
 	.bubble-bottom-left:before
@@ -447,7 +465,7 @@ p {
 			background-color: #E1BEE7; /* Purple 100 */
 		}		
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #AB47BC; /* Purple 400 */
 	}
 	.bubble-bottom-left:before
@@ -496,7 +514,7 @@ p {
 			background-color: #C8E6C9; /* Green 100 */
 		}	
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #66BB6A; /* Green 400 */	
 	}
 	.bubble-bottom-left:before
@@ -545,7 +563,7 @@ p {
 			background-color: #CFD8DC; /* Blue grey 100 */
 		}		
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #78909C; /* Blue grey 400 */	
 	}
 	.bubble-bottom-left:before
@@ -594,7 +612,7 @@ p {
 			background-color: #DCEDC8; /* Light green 100 */
 		}		
 	}
-	.bubble {
+	.media, .drawing, .bubble {
 		background: #9CCC65; /* Light green 400 */	
 	}
 	.bubble-bottom-left:before

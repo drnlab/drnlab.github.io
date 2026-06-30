@@ -91,10 +91,10 @@ window.addEventListener("load", function (event) {
 	for (var i = 0; i < videos.length; i++) 
 	{
 		videos[i].addEventListener("play", (event) => {
-			this.classList.add("video-playing");
+			event.target.classList.add("video-playing");
 		});		
 		videos[i].addEventListener("pause", (event) => {			
-			this.classList.remove("video-playing");
+			event.target.classList.remove("video-playing");
 		});
 	}	
 });

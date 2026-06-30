@@ -51,12 +51,16 @@
 				<p><i class="bi bi-clipboard-check-fill"></i>Summary:</p>
 				<div class="sub-details" style="display: block;"><p><i class="bi bi-check-square"></i>3D modeling and rigging (by <a href="https://www.jaimevicente.com/" target="_blank">Jaime</a>).</p><p><i class="bi bi-check-square"></i>Update working prototype.</p><p><i class="bi bi-check-square"></i>First GDD draft.</p></div>
 			</div></div><div class="blog-item" data="type-video"><div class="media">
-							<video controls preload="metadata" style="display: block; width: 100%;"><source src="/media/2021/03/week02.mp4#t=0.1" type="video/mp4"/></video>		
+							<video controls preload="metadata" style="display: block; width: 100%;"><source src="/media/2021/03/week02.mp4#t=0.1" type="video/mp4"/>
+								Your browser does not support the video tag.
+							</video>		
 						</div></div><div class="blog-item" data="type-header"><h3>Week 03</h3></div><div class="blog-item" data="type-tasks"><div class="details">
 				<p><i class="bi bi-clipboard-check-fill"></i>Summary:</p>
 				<div class="sub-details" style="display: block;"><p><i class="bi bi-check-square"></i>Character color keys (by <a href="https://www.joannanieto.com" target="_blank">Joanna</a>).</p><p><i class="bi bi-check-square"></i>Update working prototype - Aiming state.</p><p><i class="bi bi-check-square"></i>Steering behaviours (first tests).</p><p><i class="bi bi-check-square"></i>Ordered list of technical features.</p></div>
 			</div></div><div class="blog-item" data="type-video"><div class="media">
-							<video controls preload="metadata" style="display: block; width: 100%;"><source src="/media/2021/03/week03.mp4#t=0.1" type="video/mp4"/></video>		
+							<video controls preload="metadata" style="display: block; width: 100%;"><source src="/media/2021/03/week03.mp4#t=0.1" type="video/mp4"/>
+								Your browser does not support the video tag.
+							</video>		
 						</div></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0.75deg);">See you next month!</p></div><br/>
 				</div>
 				<div class="sidebar">
@@ -93,8 +97,11 @@ window.addEventListener("load", function (event) {
 	const videos = document.getElementsByTagName("video");
 	for (var i = 0; i < videos.length; i++) 
 	{
-		videos[i].addEventListener("focusout", function (event) {
-			this.pause();
+		videos[i].addEventListener("play", (event) => {
+  			console.log("The video has started playing.");
+		});		
+		videos[i].addEventListener("pause", (event) => {
+			console.log("The video has been paused.");
 		});
 	}	
 });

@@ -146,7 +146,7 @@ p {
 }
 
 .media:hover {
-	img, video
+	img, .video-playing
 	{
 		filter: grayscale(0%);
 		opacity: 1;

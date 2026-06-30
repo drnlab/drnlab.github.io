@@ -143,10 +143,13 @@ p {
 		opacity: 0.5;
 		transition: 1s;
 	}
-}
-
-.media:hover {
-	img, .video-playing
+	.video-playing
+	{
+		filter: grayscale(0%);
+		opacity: 1;
+		transition: 0.5s;
+	}
+	img:hover
 	{
 		filter: grayscale(0%);
 		opacity: 1;

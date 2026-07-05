@@ -9,6 +9,60 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link href="/vendor/flickity/flickity.min.css" rel="stylesheet"/>
 <link href="/style/blog.css" rel="stylesheet"/>
+<style>
+.palette {
+	h1, h2 {
+		color: #00E0BA;
+		background-color: #FF3483;
+		a {
+			color: #00E0BA;
+		}
+		a:hover {
+			background-color: #91008D;
+		}
+		.dropdown {
+			color: #00E0BA;			
+		}
+		.dropdown:hover {
+			color: #00E0BA;
+			background-color: #91008D;
+		}
+	}
+	hr, .sidebar {
+		color: #00E0BA;
+		background-color: #FF3483;
+	}
+	.item, .blog-item {
+		h3, .preview, .carousel {
+			color: #00E0BA;
+			background-color: #FF3483;
+		}
+		a {
+			background-color: #00d0a9;
+		}
+		a:hover {
+			background-color: #00c098;
+		}			
+	}
+	.media, .drawing, .bubble {
+		color: #00E0BA;
+		background: #FF3483;
+	}
+	.bubble-bottom-left:before
+	{
+		border-left-color: #FF3483;
+  		border-top-color: #FF3483;
+	}
+	.bubble-bottom-right:before
+	{
+		border-right-color: #FF3483;
+  		border-top-color: #FF3483;
+	}
+	.bubble-emoji img {
+		background-color: #FF3483;
+	}
+}
+</style>
 </head>
 <body>
 <div id="container">
@@ -26,7 +80,7 @@
 			<p><i class="bi bi-house-fill"></i><a href="/es">Inicio</a></p>
 		</div>
 	</div>
-    <div class="section blue-grey">
+    <div class="section palette">
 		<div style="display: flex;">
 			<div style="flex: 40%;">
 				<h2><a href="/es/2020">2020</a>/01</h2>
@@ -39,7 +93,7 @@
 			<hr/>
 			<div class="responsive-two-column-grid">
 				<div id="content">
-				<div class="blog-item" data="type-config"><h1 class="">Test!</h1></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0deg);">¡Esto es un parágrafo!</p></div><div class="blog-item" data="type-header"><h3>This is a header!</h3></div><div class="blog-item" data="type-tasks"><div class="details">
+				<div class="blog-item" data="type-config"><h1>Test!</h1></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0deg);">¡Esto es un parágrafo!</p></div><div class="blog-item" data="type-header"><h3>This is a header!</h3></div><div class="blog-item" data="type-tasks"><div class="details">
 				<p><i class="bi bi-clipboard-check-fill"></i>Tasks:</p>
 				<div class="sub-details" style="display: block;"><p><i class="bi bi-check-square"></i>Task 1.</p><p><i class="bi bi-check-square"></i>Task 2.</p><p><i class="bi bi-check-square"></i>Task 3.</p></div>
 			</div></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(-1deg);"></p></div><div class="blog-item" data="type-image"><div class="media" style="width: 100%; margin: auto; transform: rotate(0deg);">

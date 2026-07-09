@@ -48,6 +48,10 @@ body {
 	a:hover {
 		background-color: #BDBDBD; /* Grey 400 */
 	}
+	.current {
+		color: #fff;
+		background-color: #424242; /* Gray 800 */
+	}	
 }
 
 .details {

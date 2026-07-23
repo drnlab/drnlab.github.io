@@ -10,6 +10,40 @@
 <link href="/vendor/flickity/flickity.min.css" rel="stylesheet"/>
 <link href="/style/default.css" rel="stylesheet"/>
 <style>
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+    grid-template-areas:
+		"b-top"
+		"a"
+		"b-bottom";
+    align-items: start;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b-top {
+    grid-area: b-top;
+}
+
+.b-bottom {
+    grid-area: b-bottom;
+	height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr 0.5fr;
+		grid-template-rows: auto 1fr;
+        grid-template-areas:
+       	 	"a b-top"
+        	"a b-bottom";
+    }
+}
+
 .palette {
 	h1, h2 {
 		color: #ffff00;
@@ -65,9 +99,6 @@
 	.bubble-emoji img {
 		background-color: #FF3483;
 	}
-}
-.responsive-two-column-grid {
-    display:block;
 }
 #cover-wrapper {
 	padding: 15px;
@@ -154,12 +185,6 @@
 	image-rendering: pixelated;
   }
 }
-@media (min-width: 1024px) {
-    .responsive-two-column-grid {
-        display: grid;
-        grid-template-columns: 1fr 0.5fr;
-    }
-}
 </style>
 </head>
 <body>
@@ -189,9 +214,9 @@
 		</div>        
 		<div class="content">
 			<hr/>
-			<div class="responsive-two-column-grid">
-				<div id="content">
-				<div class="blog-item" data="type-config"><h1>Test!</h1></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0deg);">Això és un paràgraf!</p></div><div class="blog-item" data="type-header"><h3>This is a header!</h3></div><div class="blog-item" data="type-tasks"><div class="details">
+			<div class="layout">
+				<main id="content" class="a">
+					<div class="blog-item" data="type-config"><h1>Test!</h1></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0deg);">Això és un paràgraf!</p></div><div class="blog-item" data="type-header"><h3>This is a header!</h3></div><div class="blog-item" data="type-tasks"><div class="details">
 				<p><i class="bi bi-clipboard-check-fill"></i>Tasks:</p>
 				<div class="sub-details" style="display: block;"><p><i class="bi bi-check-square"></i>Task 1.</p><p><i class="bi bi-check-square"></i>Task 2.</p><p><i class="bi bi-check-square"></i>Task 3.</p></div>
 			</div></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(-1deg);"></p></div><div class="blog-item" data="type-image"><div class="media" style="width: 100%; margin: auto; transform: rotate(0deg);">
@@ -208,19 +233,19 @@
 			</div></div><div class="blog-item" data="type-drawing"><div class="drawing" style="width: 50%; margin: auto; transform: rotate(90deg);">
 							<img src="/media/2020/01/test-drawing.png" style="display: block; width: 100%; image-rendering: pixelated;"/>
 						</div></div><br/>
-				</div>
-				<div class="sidebar">
-					<div id="cover-wrapper">
-						<img src="/media/2020/01/cover.webp"/>
-						<br/>
-					</div>
-				</div>			
-			</div>			
+				</main>
+				<aside id="cover-wrapper" class="sidebar b-top">
+					<img src="/media/2020/01/cover.webp"/>
+				</aside>
+				<aside class="sidebar b-bottom">
+				</aside>
+			</div>	
 			<hr/>
 		</div>
 		<div style="display: flex;">
 			<div style="flex: 100%; text-align: right;">
 				<h2><span class="navigation-disabled">&nbsp;<i class="bi bi-chevron-left"></i>&nbsp;</span><a href="/ca/2021/03">&nbsp;<i class="bi bi-chevron-right"></i>&nbsp;</a></h2>
+			</div>
 		</div>
     </div>	<div id="contact" class="section">
         <h2>Contacte</h2>

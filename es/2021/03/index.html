@@ -15,35 +15,45 @@
     grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
     grid-template-areas:
-		"b-top"
-		"a"
-		"b-bottom";
+		"sidebar-top"
+		"main"
+		"sidebar-bottom";
     align-items: start;
 }
-
-.a {
-    grid-area: a;
+.main {
+    grid-area: main;
 }
-
-.b-top {
-    grid-area: b-top;
+.sidebar-top {
+    grid-area: sidebar-top;
+	padding: 15px;
+	img
+	{
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		filter: grayscale(100%) contrast(1);
+		mix-blend-mode: screen;
+		opacity: 1;
+		image-rendering: pixelated;
+	}	
 }
-
-.b-bottom {
-    grid-area: b-bottom;
+.sidebar-bottom {
+    grid-area: sidebar-bottom;
 	height: 100%;
+	.info
+	{
+		padding: 15px;
+	}
 }
-
 @media (min-width: 1024px) {
     .layout {
         grid-template-columns: 1fr 0.5fr;
 		grid-template-rows: auto 1fr;
         grid-template-areas:
-       	 	"a b-top"
-        	"a b-bottom";
+       	 	"main sidebar-top"
+        	"main sidebar-bottom";
     }
 }
-
 .palette {
 	h1, h2 {
 		color: #FFFFFF;
@@ -66,7 +76,7 @@
 	.navigation-disabled {
 		color: #EF5350;
 	}
-	hr, .sidebar {
+	hr, .sidebar-top, .sidebar-bottom {
 		color: #FFFFFF;
 		background-color: #EF5350;
 	}
@@ -99,19 +109,6 @@
 	.bubble-emoji img {
 		background-color: #EF5350;
 	}
-}
-#cover-wrapper {
-	padding: 15px;
-}
-#cover-wrapper img
-{
-	display: block;
-    width: 100%;
-    max-width: 100%;
-	filter: grayscale(100%) contrast(1);
-	mix-blend-mode: screen;
-	opacity: 1;
-	image-rendering: pixelated;
 }
 /* widgets */
 .blog-item {
@@ -146,44 +143,44 @@
 }
 /* speech-bubble */
 .bubble {
-  position: relative;
-  width: 95%;
-  margin: auto;
-  background: #000;
-  border-radius: 20px;
-  text-align: center;
-  p {
-    padding: 25px;
-  }
+	position: relative;
+	width: 95%;
+	margin: auto;
+	background: #000;
+	border-radius: 20px;
+	text-align: center;
+	p {
+		padding: 25px;
+	}
 }
 .bubble-bottom-left:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 24px solid #000;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #000;
-  border-bottom: 20px solid transparent;
-  left: 150px;
-  bottom: -24px;
+	content: "";
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border-left: 24px solid #000;
+	border-right: 12px solid transparent;
+	border-top: 12px solid #000;
+	border-bottom: 20px solid transparent;
+	left: 150px;
+	bottom: -24px;
 }
 .bubble-bottom-right:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 12px solid transparent;
-  border-right: 24px solid #000;
-  border-top: 12px solid #000;
-  border-bottom: 20px solid transparent;
-  right: 150px;
-  bottom: -24px;
+	content: "";
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border-left: 12px solid transparent;
+	border-right: 24px solid #000;
+	border-top: 12px solid #000;
+	border-bottom: 20px solid transparent;
+	right: 150px;
+	bottom: -24px;
 }
 .bubble-emoji {
-  img {
-	image-rendering: pixelated;
-  }
+	img {
+		image-rendering: pixelated;
+	}
 }
 </style>
 </head>
@@ -215,7 +212,7 @@
 		<div class="content">
 			<hr/>
 			<div class="layout">
-				<main id="content" class="a">
+				<main class="main">
 					<div class="blog-item" data="type-config"><h1>Making Bombarama I</h1></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(-0.25deg);">Una serie sobre la creación de Bombarama en <a href="https://www.levelup-gamedevhub.com/en/advanced-game-programming-bootcamp-with-unity/" target="_blank">este bootcamp</a>.</p></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0.3deg);">Bombarama es una carta de amor a juegos como Bomberman o Butasan. Juegos a los que mi hermana y yo jugábamos sin parar durante horas en nuestra infancia. ¡Incluso apostábamos dinero, jaja! :P</p></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(-0.4deg);">Bueno, ¡basta de cháchara! <i class="bi bi-emoji-smile-upside-down"></i></p></div><div class="blog-item" data="type-header"><h3>Week 01</h3></div><div class="blog-item" data="type-tasks"><div class="details">
 				<p><i class="bi bi-clipboard-check-fill"></i>Summary:</p>
 				<div class="sub-details" style="display: block;"><p><i class="bi bi-check-square"></i>Update working prototype.</p><p><i class="bi bi-check-square"></i>Character design.</p><p><i class="bi bi-check-square"></i>3D model block out (by <a href="https://www.jaimevicente.com/" target="_blank">Jaime</a>).</p></div>
@@ -246,10 +243,11 @@
 							</video>		
 						</div></div><div class="blog-item" data="type-paragraph"><p class="info" style="transform: rotate(0.75deg);"></p></div><br/>
 				</main>
-				<aside id="cover-wrapper" class="sidebar b-top">
+				<aside class="sidebar-top">
 					<img src="/media/2021/03/cover.webp"/>
 				</aside>
-				<aside class="sidebar b-bottom">
+				<aside class="sidebar-bottom">
+					<div class="info"></div>
 				</aside>
 			</div>	
 			<hr/>

@@ -10,7 +10,46 @@
 <link href="/vendor/flickity/flickity.min.css" rel="stylesheet"/>
 <link href="/style/default.css" rel="stylesheet"/>
 <style>
-.year {
+.layout {
+  display: grid;
+  grid-template-columns: repeat(6, 16.66%);
+  padding: 5px;
+}
+.cover {
+	aspect-ratio: 1/1.414;
+  	padding: 5px;
+  	text-align: center;
+	.empty {
+		height: 100%;
+		align-content: center;
+		color: #AAAAAA;
+		background-color: #EEEEEE;
+	}
+  	img {
+		display: block;
+		width: 100%;
+		filter: grayscale(100%) contrast(1);
+		mix-blend-mode: screen;
+		opacity: 1;
+		image-rendering: pixelated;
+	}
+}
+@media screen and (max-width: 1536px) {
+	.cover-container {
+		grid-template-columns:repeat(4, 25%);
+	}
+}
+@media screen and (max-width: 1024px) {
+	.cover-container {
+		grid-template-columns:repeat(3, 33.33%);
+	}
+}
+@media screen and (max-width: 768px) {
+	.cover-container {
+		grid-template-columns:repeat(2, 50%);
+	}
+}
+.palette {
 	h2 {
 		color: white;
 		background-color: #BDBDBD;
@@ -28,46 +67,6 @@
 	}
 	hr {
 		background-color: #BDBDBD;
-	}
-}
-.cover-container {
-  display: grid;
-  grid-template-columns: repeat(6, 16.66%);
-  padding: 5px;
-}
-.cover {
-  aspect-ratio: 1/1.414;
-  padding: 5px;
-  text-align: center;
-  .empty {
-	height: 100%;
-	align-content: center;
-	color: #AAAAAA;
-	background-color: #EEEEEE;
-  }
-}
-.cover img
-{
-	display: block;
-	width: 100%;
-	filter: grayscale(100%) contrast(1);
-	mix-blend-mode: screen;
-	opacity: 1;
-	image-rendering: pixelated;
-}
-@media screen and (max-width: 1536px) {
-	.cover-container {
-		grid-template-columns:repeat(4, 25%);
-	}
-}
-@media screen and (max-width: 1024px) {
-	.cover-container {
-		grid-template-columns:repeat(3, 33.33%);
-	}
-}
-@media screen and (max-width: 768px) {
-	.cover-container {
-		grid-template-columns:repeat(2, 50%);
 	}
 }
 </style>
@@ -88,7 +87,7 @@
 			<p><i class="bi bi-house-fill"></i><a href="/en/">Home</a></p>
 		</div>
 	</div>
-    <div class="section year">
+    <div class="section palette">
 		<div style="display: flex;">
 			<div style="flex: 40%;">
 				<h2>2022</h2>
@@ -99,7 +98,7 @@
 		</div>
 		<div class="content">
 			<hr/>
-			<div class="cover-container">
+			<div class="layout">
 			
 	
 		<div class="cover">
